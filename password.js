@@ -5,13 +5,31 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-reader.question(`Welcome to the user password validator tool. Please enter a password with no more then 10 characters long`, function() {
-    let enterPassword = prompt(`Please enter your password`);
+console.log(`Welcome to the user password validator tool`);
 
-    if (enterPassword.length >= 10) {
-        console.log(`${enterPassword} ${enterPassword.length}`);
+reader.question(`Please enter your password`, (answer) => {
+    if(answer.length >= 10) {
+        console.log(`Success, you are logged in`);
     } else {
-        console.log(`Sorry, but the password is either short or have exceeded the character limit. Please try again.`);
+        console.log(`Password is not long enough`);
     }
-});
+    reader.close();
+});  
 
+
+// welcome the user in a console.log so, its like this
+// EX: console.log(`Welcome to the user password validator tool`)
+
+// in the reader.question, set up the code this way 
+// reader.question("Please enter your password", (answer) => {
+//  if(answer.length >= 10 ) {
+// console.log(`Success, you are logged in`)    
+//} else {
+ // console.log(`Password is not long enough`)   
+//}   
+// reader.close();
+//})
+
+// the reader.close() is to finish the program 
+// You must put the name and then .close() 
+// just for the code to run and work. 

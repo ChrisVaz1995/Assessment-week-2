@@ -6,6 +6,8 @@
 */
 
 //CODE HERE
+
+// must add num1 + num2 in the return statement. 
 function sum(num1, num2) {
   return {num1, num2};
 }
@@ -41,7 +43,20 @@ console.log(greaterThanFive(3));
 
 //CODE HERE
 
+
+// replace the world.length with word[0]
+// with the return statement, make it a string like this: return `word begins with a z`
+// else 
+// return ``the word does not begin with a z
+
+
 // function findZWords(word) {
+
+// you can use 
+// word = word.toLowerCase() 
+// or 
+// word.startsWith(`z`)          must be inside the if statement for it to work. 
+
 //   if(word.length === `Z`) { 
 //      return word.length === 1 && word.match(/[a-z]/i);
 //   }

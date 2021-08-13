@@ -16,17 +16,23 @@
 
 //CODE HERE
 
+// the greeter function should be part of the objects, underneath the age value
+// then from there, right it into a function like this.
+// EX: greeter: function () {
+// return `Hello, my name is ${this.firstName} and I live in ${this.state}`
+//}
+
+
 const me = {
   firstName: `Chris`,
   state: `Texas`,
   age: 25,
+  greeter: function () {
+    return `Hello, my name is ${this.firstName} and I live in ${this.state}`;
+  }
 }
 
-me.greeter = function() {
-  console.log(`${firstName}`);
-};
-
-me.greeter();
+console.log(me);
 //////////////////PROBLEM 2////////////////////
 /*
   Write a function called carFactory that takes in three parameters: a make, model, and year.  
@@ -51,15 +57,42 @@ me.greeter();
   }
 */
 
+// Step 1: 
+// within the car function, create a variable called car and have it setup like this
+// const car = {make, model, year};
+// inside that function, create a console.log inside it as well
+// then call the function and adding in the values for the parameter 
+// EX: carFactory(`Chevy`, `Malibu`, 2012);
+
+// OR 
+// you can use another way coding it is using the class method
 // class carFactory {
-//   constructor (make, model, year) {
-//     this.make = make;
-//     this.model = model;
-//     this.year = year;
-//     if(this.year > 2018) {
-//       isNew = true;
-//     } else {
-//       isNew = false;
-//     }
-// }
-// }
+// constructor (make, model, year) {
+//
+//}
+//}
+
+
+// Step 2
+// create a if statement inside the carFactory function 
+// if (year > 2028) {
+//  this.isNew = true;
+//}  else {
+//  this.isNew = false; 
+//}
+
+class carFactory {
+  constructor (make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    if(year > 2018) {
+      this.isNew = true;
+    } else {
+      this.isNew = false; 
+    }
+  }
+}
+
+let car1 = new carFactory(`Chevy`, `Malibu`, 2012);
+console.log(car1);

@@ -21,7 +21,7 @@ console.log(gitDefinition);
 
 //CODE HERE
 
-let gitHubDefinition = `Github is a website that lets programmers publish their code on a public website. This is also used to collerbate work with other programmers and coworkers.`;
+let gitHubDefinition = `Github is a website that lets programmers publish their code on a public website. This is also used to collaborate work with other programmers and coworkers.`;
 console.log(gitHubDefinition);
 //////////////////PROBLEMS 3 - 8////////////////////
 /*
@@ -65,7 +65,7 @@ const clone = {
 //CODE HERE
 
 const status = {
-    description: `the status command gives you a informatoin about the current repo that you're using`,
+    description: `the status command gives you a informatoin about the current repo that you're using. Machine and github`,
     code: `git status`,
 };
 
@@ -79,8 +79,8 @@ const status = {
 
 
 const add = {
-    description: `the add command adds files to your repo. This will keep track of all of the files that has been added `,
-    code: `git add`,
+    description: `the add command adds files to your repo. This will keep track of all of the files that has been added on your local machine`,
+    code: `git add . <file name>`,
 };
 //////////////////PROBLEM 7////////////////////
 /*
@@ -90,8 +90,8 @@ const add = {
 
 //CODE HERE
 const commit = {
-    description: `the commit command takes a screenshot of the files that you're currently using`,
-    code: `git commit`,
+    description: `the commit command takes a screenshot of the files that you're currently using on your local machine`,
+    code: `git commit -m "must leave a message in the quotes"`,
 };
 
 //////////////////PROBLEM 8////////////////////

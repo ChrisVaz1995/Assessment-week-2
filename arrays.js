@@ -44,18 +44,24 @@ console.log(middleNums);
 
 
 // Stuck on this, can't figure it out. Been googling on how to do this type of function.
+
+// the arr parameter needs to be inside the foor loop.
+// i > arr.length
+// then after that, the arr[i] will need to be inside the if statement 
+// then have the return statement needs to be in line 62
 function bigOrSmall (arr) {
-  arr = [100, 10, 200, 20, 300, 30];
   let answers = [];
-  for(i = 0; i > 100; i++) {
-    if (arr > 100) {
+  for(i = 0; i > arr.length; i++) {
+    if (arr[i] > 100) {
       answers.push(`big`); 
-    } else if (arr <= 100) {
+    } else if (arr[i] <= 100) {
       answers.push(`small`);
     } else {
-      return answers;
     }
+    return answers;
   }
 }
 // bigorSmall(101);
-console.log(bigOrSmall(101));
+// make sure to put the bigOrSmall(parameters) and fill in the numbers. Must be in brackets because it is an array
+// EXAMPLE: console.log(bigOrSmall([]))
+console.log(bigOrSmall([100, 10, 200, 20]));
